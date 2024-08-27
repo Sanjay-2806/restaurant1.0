@@ -1,0 +1,396 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'josefin sans',sans-serif;
+}
+.hero{
+    width: 100%;
+    height: 105vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.6),rgba(0,0,0,0.6)),url("backgrd\ \(1\).jpg");
+    background-position: center;
+    background-size: cover;
+   
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.logo{
+    color: white;
+    animation: logo 2s;
+    font-size: 36px;
+}
+@keyframes logo {
+from{
+    transform: translateX(-140px);
+    opacity: 0;
+}
+to{
+    transform: translateX(0px);
+    opacity: 1;
+}   
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+
+}
+ul{
+  animation: a 2s;
+}
+    @keyframes a {
+    
+        from{
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0px);
+            opacity: 1;
+        }  
+        
+}
+.circle{
+    display: block;
+    height: 150px;
+    width: 150px;
+    color: #000000;
+    background-color: rgb(57, 237, 105);
+    align-items: center;
+    border-radius: 50%;
+   text-align: center;
+    margin-top: 45px;
+    margin-left: 150px;
+    padding-top: 35px;
+    font-weight: 600;
+    font-size: 23px;
+    animation: circle 3s;
+}
+@keyframes circle {
+    from{
+        transform: translateX(-140px) rotate(0deg);
+    }
+    to{
+        
+       opacity: 1;
+       transform: translateX(calc(0vw - 0px)) rotate(360deg);
+    }
+}
+.circle:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.a{
+    color: white;
+    padding: 10px;
+    padding-left: 17px;
+    margin-left: 155px;
+    margin-top: 19px;
+    font-weight: 600;
+    letter-spacing: 0.9px;
+   width: 600px;
+   height: 180px;
+   animation: div 3s;
+    box-shadow: 15px 10px 15px 10px black;  
+   border-radius: 10px;
+}
+a:hover{
+    color: lightgreen;
+}
+.b{
+    margin-top: 12px;
+    font-size: 46px;
+}
+@keyframes div {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.25;
+    }
+    50%{
+        opacity: 0.50;
+    }
+    75%{
+        opacity: 0.75;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.a:hover{
+    transform: scale(1.1);
+}
+.c{
+    margin-left: 190px;
+    margin-top: 39px;
+
+}
+button{
+    padding: 9px;
+    background-color: lightgreen;
+    border-radius: 10px;
+    border: none;
+    animation: btn1 4s;
+    font-size: 16px;
+    font-weight:normal;
+}
+button:hover{
+    box-shadow: 0px 0px 10px lightgreen,0px 0px 20px lightgreen ;
+}
+@keyframes btn1 {
+    from{
+        transform: translateY(10px) rotate(0deg);
+    }
+    to{
+        
+       opacity: 1;
+       transform: translateY(calc(0vw - 0px)) rotate(360deg);
+    }
+}
+.section{
+    width: 100%;
+    height: 100vh;
+   background-color: rgb(21, 21, 21);
+    background-position: center;
+    background-size: cover;
+}
+@media screen and (min-width: 1120px) {
+    :root {
+      --h2-font-size: 1.5rem;
+      --small-font-size: .875rem;
+    }
+  }
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.container {
+    display: grid;
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+  }
+  
+  .card__container {
+    display: grid;
+    row-gap: 3.5rem;
+  }
+  
+  .card__article {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card__img {
+    width: 328px;
+    border-radius: 1.5rem;
+  }
+  
+  .card__data {
+    width: 280px;
+    background-color:white;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -9rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+  }
+  .card__data:hover{
+    box-shadow: 0px 0px 20px whitesmoke, 0px 0px 20px black;
+  }
+  .card__description {
+    display: block;
+    font-size:30px;
+    margin-bottom: .25rem;
+  }
+  
+  .card__title {
+    font-size: var(--h2-font-size);
+    font-weight: 500;
+    color: var(--title-color);
+    margin-bottom: .75rem;
+  }
+  
+  .card__button {
+    text-decoration: none;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    color: var(--first-color);
+  }
+  
+  .card__button:hover {
+    text-decoration: underline;
+    color: red;
+  }
+  /* name veikuran */
+  .card__article:hover .card__data {
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+  }
+  
+  .card__article:hover {
+    animation: remove-overflow 2s forwards;
+  }
+  
+  .card__article:not(:hover) {
+    animation: show-overflow 2s forwards;
+  }
+  
+  .card__article:not(:hover) .card__data {
+    animation: remove-data 1s forwards;
+  }
+  
+  /* Card animation */
+  @keyframes show-data {
+    50% {
+      transform: translateY(-10rem);
+    }
+    100% {
+      transform: translateY(-7rem);
+
+    }
+  }
+  
+  @keyframes remove-overflow {
+    to {
+      overflow: initial;
+    }
+  }
+  
+  @keyframes remove-data {
+    0% {
+      transform: translateY(-7rem);
+    }
+    50% {
+      transform: translateY(-10rem);
+    }
+    100% {
+      transform: translateY(.5rem);
+    }
+  }
+  
+  @keyframes show-overflow {
+    0% {
+      overflow: initial;
+      pointer-events: none;
+    }
+    50% {
+      overflow: hidden;
+    }
+  }
+  /* small device ku */
+  @media screen and (max-width: 340px) {
+    .container {
+      margin-inline: 1rem;
+    }
+  
+    .card__data {
+      width: 250px;
+      padding: 1rem;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .card__container {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1.5rem;
+    }
+  }
+  @media screen and (min-width: 1120px) {
+    .container {
+      height: 100vh;
+    }
+  
+    .card__container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .card__img {
+      width: 348px;
+    }
+    .card__data {
+      width: 316px;
+      padding-inline: 2.5rem;
+    }
+  }
+.booking-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+.table{
+
+    background-color: rgb(35, 35, 35);
+}
+.booking-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+.booking-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+.booking-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: lightgreen;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.booking-form btn11:hover {
+    background-color: lightgreen;
+}
+.gg{
+    background-color:orangered;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+}
+.gg:hover{
+    color: white;
+    box-shadow: 0px 0px 10px orangered, 0px 0px 10px orangered ;
+}
